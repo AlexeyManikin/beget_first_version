@@ -1,0 +1,124 @@
+<!-- BEGIN Document -->
+{START}
+<SCRIPT language="JavaScript" type="text/javascript">
+function showinf(n)
+{
+ if (document.getElementById("i"+n).style.display=="block")
+  {
+   document.getElementById("i"+n).style.display="none";
+   document.getElementById("hh"+n).className="";
+   document.getElementById("img"+n).src="images/str2.png";
+  }
+   else 
+  {
+   var l = document.getElementById("list").getElementsByTagName("div");
+   
+   var l = document.getElementById("list").getElementsByTagName("h4")
+   for (var i=0; i<l.length; i++) l[i].className="";
+
+   document.getElementById("i"+n).style.display="block";
+   document.getElementById("hh"+n).className="";
+   document.getElementById("img"+n).src="images/str.png";
+  }
+};
+
+function mouse_over(src)
+{
+    var img = document.getElementById(src + "_img");
+    img.src = "/images/" + src + "_color.png";
+};
+
+function mouse_out(src)
+{
+    var img = document.getElementById(src + "_img");
+    img.src = "/images/" + src + "_bleak.png";
+};
+</script>
+
+
+
+
+
+
+<table  border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" border="0" >
+<tr valign="top">
+  <td width=860>
+    <table  border="0" cellspacing="0" cellpadding="0" style="background: white url('/images/backg.png') no-repeat top center;width:860px;height:164px;">
+    <tr valign=top>
+      <td align=left style="width:340px; padding-left: 20px; padding-top: 35px;" width="30%" >
+	<a href="http://www.beget.ru"><img  src="images/logo.png" border="0"></a>
+      </td>
+<td width="40%" style="padding-top: 40px; padding-left:10px;">
+<table align="left">
+<tr>
+<td align="left"><span id="list" >
+<span id="hh1"><a href="#"  onclick="showinf(1); return false;"><img src="images/str.png" id="img1" border="0"></a></span>
+
+<a href="http://cp.beget.ru/newdomain.php" style= "margin-left:10px; color: #0066cc;  font-weight: 600;">Домены .RU по 200 руб/год </a>
+<div class="inf" style="display:block" id="i1"  >
+
+<span style="margin-left:25px;">Регистрация и продление домена в зоне .RU </span>
+<span style="margin-left:25px;"> всего за 200 рублей в год.</span>
+</div>
+
+</td>
+</tr>
+<tr>
+<td align="left">
+<br>
+<span id="hh2"><a href="#"  onclick="showinf(2); return false;">
+<img src="images/str.png" id="img2" border="0"></a></span>
+
+<a href="http://cp.beget.ru/" style= "margin-left:10px; color: #0066cc;  font-weight: 600;">Увеличен объём пространства </a>
+<div class="inf" style="display:block" id="i2"  >
+<span style="margin-left:25px;">На всех тарифных планах хостинга увеличен  </span><br>
+<span style="margin-left:25px;"> максимальный объём 
+дискового пространства. </span>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</td>
+      <td width="30%" align="left">
+	<table >
+	<tr>
+	<td style="padding-top: 40px; padding-left: 10px;">
+	<div onclick="javascript:location.href='http://cp.beget.ru/support.php'"
+	 onmouseover="mouse_over('email');" onmouseout="mouse_out('email');">
+	<img src="/images/email_bleak.png" id="email_img" border="0"/>
+	<br/>
+       <span style="padding-left:10px;">Связь</span>
+	</div>
+	</td>
+	<td style="padding-top:40px; padding-left: 15px;">
+       <div onclick="javascript:location.href='http://cp.beget.ru/index.php'"
+	 onmouseover="mouse_over('home');" onmouseout="mouse_out('home');">
+	<img src="/images/home_bleak.png" id="home_img" border="0"/>
+	<br/>
+       <span style="padding-left:10px;">Меню</span>
+	</div>
+	</td>
+	<td style="padding-top:40px; padding-left: 15px;">
+       <div onclick="javascript:location.href='http://cp.beget.ru/login_.php?logout'"
+	 onmouseover="mouse_over('exit');" onmouseout="mouse_out('exit');">
+	<img src="/images/exit_bleak.png" id="exit_img" border="0"/>
+	<br/>
+       <span style="padding-left:10px;">Выход</span>
+	</div>
+	</td>
+	</tr>
+		<tr >
+	<td  colspan = "3" style="padding-left: 40px; padding-top: 15px;">
+E-mail: <a href="mailto:support@beget.ru">support@beget.ru</a>
+	</td>
+
+	</tr>
+	</table>
+      </td>
+</tr>
+    </table>
+  </td>
+ </tr>
+</table>
+<!-- END Document -->

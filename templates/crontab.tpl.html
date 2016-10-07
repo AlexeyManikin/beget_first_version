@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+  <script script src='/js/ajax.js'></script>
+  <script script src='/js/crontab.js'></script>
+</head>
+
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+	    <br>
+            <!-- BEGIN DOCUMENT -->
+	    <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 550px;">
+             <table width="550" align="center" border="0">
+              <tr>
+                <td>
+                  <table border="0" width="100%">
+                  <tr>
+                    <td width="100">
+                      <img alt="CronTab" border="0" src="/images/crontab_big.png"/>
+                    </td>
+                    <td>
+                      <center>
+                       <h2>Настойка выполнений заданий по расписанию</h2>
+                      </center>
+                    </td>
+                  </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                Результат выполнения Ваших скритпов может быть отправлен Вам по почте
+                <form id="formChangeMail"  name="formChangeMail" method="post">
+	                <input type="hidden" name="actions" value="setMailTo"><br>
+	                <input type="input" name="mail"  value="{MAILTO}" style="width: 200px; margin:0px;">
+	                <input type="submit" value="Сохранить" style="width: 100px; margin:0px;"/>
+	            </form>
+
+	           <form id="fremoveEntry"  name="fremoveEntry" method="post">
+	             <input type="hidden" name="actions" value="removeEntry">
+	             <input type="hidden" name="number"  value="">
+	           </form>
+
+	           <form id="changeJob"  name="changeJob" method="post">
+	             <input type="hidden" name="actions" value="">
+	             <input type="hidden" name="minutes"  value="">
+	             <input type="hidden" name="hours" value="">
+	             <input type="hidden" name="days"  value="">
+	             <input type="hidden" name="monthes" value="">
+	             <input type="hidden" name="dows"  value="">
+	             <input type="hidden" name="commands" value="">
+	             <input type="hidden" name="number" value="">
+	           </form>
+
+
+	  <table cellspacing="0" cellpadding="0"  style="padding-top: 5px; " align="center">
+	    <tbody>
+	      <tr>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 50px; height: 23px;">Минуты</td>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 50px;">Часы</td>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 50px;">Дни</td>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 55px;">Месяцы</td>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 80px;">Дни недели</td>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 200px;">Исполняемый файл</td>
+	        <td bgcolor="#D5D6D7" align="center" class="table1" style="width: 60px;"> Дейсвие </td>
+	      </tr>
+
+
+                <!-- BEGIN CRONTABLE -->
+	      <tr>
+	        <td valign="center" style="padding-top: 3px;">
+	         <center>
+	         <input id="minutes{NUMBER}" value="{MINUTES}" style="width: 45px;"/>
+	         </center>
+	        </td>
+	        <td valign="center" style="padding-top: 3px;">
+	         <center>
+	         <input id="hours{NUMBER}" value="{HOURS}" style="width: 44px;"/>
+	         </center>
+	        </td>
+	        <td valign="center" style="padding-top: 3px;">
+	          <center>
+	          <input id="days{NUMBER}" value="{DAYS}" style="width: 46px;"/>
+	          </center>
+	        </td>
+	        <td valign="center" style="padding-top: 3px;">
+	          <center>
+	          <input id="monthes{NUMBER}" value="{MONTHES}" style="width: 51px;"/>
+	          </center>
+	        </td>
+	        <td valign="center" style="padding-top: 3px;">
+	           <center>
+	           <input id="dows{NUMBER}" value="{DOWS}" style="width: 76px;"/>
+	           </center>
+	        </td>
+	        <td valign="center" style="padding-top: 3px;">
+	           <center>
+	           <input id="commands{NUMBER}" value='{COMMANDS}' style="width: 196px;"/>
+	           </center>
+	        </td>
+	        <td >
+	          <center>
+	          <table border="0" cellspacing="0" cellpadding="0" style="width: 90%; height: 23px;">
+	            <tbody>
+	              <tr >
+	                <td  valign="center">
+			  <center>
+	                  <a onclick="javascript:changeEntry('{NUMBER}');" href="#">
+	                  <img border="0" src="../images/save-16x16.png" alt="Сохранить" title="Сохранить" style="padding-top: 3px;">
+	                  </a>
+			  </center>
+	                </td>
+	                <td  valign="center">
+			  <center>
+	                  <a onclick="javascript:removeEntry('{NUMBER}');" href="#">
+	                  <img border="0" src="../images/delete-16x16.png" alt="Удалить" title="Удалить" style="padding-top: 3px;">
+	                  </a>
+			  </center>
+	                </td>
+	              </tr>
+	            </tbody>
+	          </table>
+	          </center>
+	        </td>
+	      </tr>
+
+	      <!-- END CRONTABLE -->
+
+	       <tr>
+	        <td valign="center" style="padding-top: 3px;">
+	          <center>
+	          <input id="minutes_add" value="" style="width: 45px;"/>
+	          </center>
+	        </td>
+	        <td valign="center" style="padding-top: 3px;">
+		      <center>
+	          <input id="hours_add" value="" style="width: 44px;"/>
+		      </center>
+	        </td>
+		    <td valign="center" style="padding-top: 3px;">
+		      <center>
+		      <input id="days_add" value="" style="width: 46px;"/>
+		      </center>
+		    </td>
+		    <td valign="center" style="padding-top: 3px;">
+		      <center>
+		      <input id="monthes_add" value="" style="width: 51px;"/>
+		      </center>
+		    </td>
+		    <td valign="center" style="padding-top: 3px;">
+		      <center>
+		      <input id="dows_add" value="" style="width: 76px;"/>
+		      </center>
+		    </td>
+	        <td valign="center" style="padding-top: 3px;">
+		      <center>
+	          <input id="commands_add" value='' style="width: 196px;"/>
+		      </center>
+	        </td>
+		    <td style="padding-ltop: 3px;">
+		      <center>
+	          <a onclick="javascript:addEntry();" href="#">
+		    <img border="0" src="images/add.png" alt="Добавить" title="Добавить" style="padding-top: 3px; width: 19px;">
+		  </a>
+		      </center>
+	        </td>
+	      </tr>
+
+
+	    </tbody>
+	  </table>
+
+	  <br>
+	    <b>&nbsp;&nbsp;&nbsp;&nbsp;[ <font color=red> Пояснения </font> ]</b><br><br>
+	   	<b>Время, интервал</b><br>
+		Минуты могут быть от 0 до 59<br>
+		Часы могут быть от 0 до 23<br>
+		День месяца может быть от 1 до 31<br>
+		Месяц может быть 1 до 12<br>
+		День недели может быть от 0 до 7 (0 или 7 - воскресенье)<br>
+		<br>
+		Можно конфигурировать CRONTAB для выполнения задач не только в определенное <br>
+		время, но и ежеминутно, ежечасно, ежедневно, еженедельно или ежемесячно,<br>
+		используя комбинацию */x<br>
+		<br>
+		Пример:<br>
+		*/5 * * * * - запускать команду каждые пять минут<br>
+		0 */3 * * * - запускать каждые три часа<br>
+		0 12,13,14 * * * - запускать команду каждый час с 12 до 14 <br>
+		<br>
+		<b>Команда</b><br>
+		Необходимо задать путь до скрипта от домашнего каталога<br>
+		Например: public_html/cgi-bin/script.pl<br>
+		Cистема сама подставит символ ~/ (эта комбинация заменяет полный путь)<br>
+		Получится: ~/public_html/cgi-bin/script.pl<br>
+		Если в конце пути поставить символ &, то скрипт будет работать в фоновом режиме. <br>
+		Установка этого символа необязательна.<br>
+                </td>
+              </tr>
+            </table>
+            </center>
+            </td>
+          </tr>
+        </table>
+	</fieldset>
+	<!-- END DOCUMENT -->
+       </center>
+       </td>
+     </tr>
+     <tr>
+       <td class="floor_border">
+         <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+       </td>
+     </tr>
+  </table>
+  </center>
+  {ALERT};
+</body>

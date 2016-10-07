@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src='/js/ajax.js'></script>
+  <script src='/js/newdomain.js'></script>
+</head>
+
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+            <!-- BEGIN DOCUMENT -->
+             <table width="550" align="center" border="0">
+              <tr>
+                <td>
+                  <form id="actionForm"  name="actionForm" method="post">
+	                <input type="hidden" name="actions" value="">
+	                <input type="hidden" name="id"  value="">
+	              </form>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+
+                  <table style="margin-top:10px;margin-bottom:10px;">
+                    <tr>
+                      <td>
+                         <fieldset  id="fs_person_info" border=0 STYLE="border: 1px solid #e4e4e4; width: 460px;height: 430px;">
+                           <legend>
+                             <font color='#454646'>Данные о персоне для регистрации домена</font>
+                           </legend>
+                           <form id="idPersonForm" method="POST">
+
+                           <table>
+                             <tr valign=center>
+                               <td style="width:150px;">Тип персоны</td>
+                               <td>
+                               <!-- BEGIN PERSON_TYPE -->
+                                 <select name='type' id='type' onChange='javascript:change_type();' style="width:230px;">
+                                  {NULL}
+                                   <option value='person'>Физическое лицо
+                                   <option value='org'>Юридическое лицо
+                                 </select>
+                               <!-- END PERSON_TYPE -->
+                               <!-- BEGIN PERSON -->{NULL} Физическое лицо
+                                 <input type="hidden" name="type" id="type" value="person">
+                               <!-- END PERSON -->
+                               <!-- BEGIN ORG -->{NULL} Юридическое лицо
+                                 <input type="hidden" name="type" id="type" value="org">
+                               <!-- END ORG -->
+                               </td>
+                             </tr>
+
+<!-- BEGIN PERSON_DATE -->
+<input type="hidden" name="actions" value="doCreatePerson">
+<input type="hidden" name="id"  value="{ID}">
+<tr valign=top id="tr_family" style="display:none;">
+  <td>Фамилия</td>
+  <td><input id='family' name='family' value='{FAMILY}' style="width:230px;"></td>
+</tr>
+
+<tr valign=top id="tr_name" style="display:none;">
+  <td>Имя</td>
+  <td><input id='name' name='name' value='{NAME}' style="width:230px;" ></td>
+</tr>
+<tr valign=top id="tr_patronymic" style="display:none;">
+
+  <td>Отчество</td>
+  <td><input id='patronymic' name='patronymic' value='{PATRONYMIC}' style="width:230px;"></td>
+</tr>
+<tr valign=top id='tr_line_5' style="display:none;">
+  <td colspan="2">&nbsp;</td>
+</tr>
+<tr valign=top id="tr_fio_english" style="display:none;">
+  <td>ФИО на английском<br/>(пример: Ivan I Ivanov)</td>
+  <td><input id='fio_english' name='fio_english' value='{FIO_ENGLISH}' style="width:230px;"></td>
+
+</tr>
+<tr valign=top id='tr_line_4' style="display:none;">
+  <td colspan="2">&nbsp;</td>
+</tr>
+
+<tr valign=top id="tr_pp_series" style="display:none;">
+  <td>Паспорт</td>
+  <td><input id='pp_series' name='pp_series' maxlength=4 value='{PP_SERIES}' style="width:80px;"><b>&nbsp;-&nbsp;</b>
+  <input id='pp_num' name='pp_num' maxlength=6 value='{PP_NUM}' style="width:136px;"></td>
+</tr>
+<tr valign=top id="tr_pp_date" style="display:none;">
+  <td>Дата выдачи паспорта</td>
+  <td><input id='pp_date' name='pp_date' value='{PP_DATE}' style="width:230px;" >&nbsp;
+
+  </td>
+</tr>
+<tr valign=top id="tr_pa_address" style="display:none;">
+  <td>Организация, выдавшая паспорт</td>
+  <td><input id='pa_address' name='pp_address' value='{PA_ADDRESS}' style="width:230px;"></td>
+</tr>
+<tr valign=top id='tr_line_3' style="display:none;">
+  <td colspan="2">&nbsp;</td>
+
+</tr>
+<tr valign=top id='tr_birth_date' style="display:none;">
+  <td>Дата рождения</td>
+  <td><input id='birth_date' name='birth_date' value='{BIRTH_DATE}' style="width:230px;">&nbsp;
+
+  </td>
+</tr>
+<tr valign=top id='tr_adress' style="display:none;">
+  <td>Адрес (индекс, адрес)</td>
+  <td><input id='index' name='index' maxlength=6 value='{INDEX}' style="width:50px;">
+
+  <input id='adress' name='adress' value='{ADRESS}' style="width:175px;"></td>
+</tr>
+
+<tr valign=top id='tr_tel' style="display:none;">
+  <td>Телефон (код страны, код города, номер телефона</td>
+  <td><input id='tel' name='tel' value='{TEL}' style="width:230px;"></td>
+</tr>
+<tr valign=top id='tr_email' style="display:none;">
+  <td>E-mail</td>
+  <td><input id='email' name='email' value='{EMAIL}' style="width:230px;"></td>
+</tr>
+
+
+<tr valign=top id='tr_company' style="display:none;">
+  <td>Название компании на русском</td>
+  <td><input id='company' name='company' value='{COMPANY}' style="width:230px;"></td>
+</tr>
+
+<tr valign=top id='tr_company_eng' style="display:none;">
+  <td>Название компании на английском</td>
+
+  <td><input id='company_eng' name='company_eng' value='{FIO_ENGLISH}' style="width:230px;"></td>
+</tr>
+<tr valign=top id='tr_line_2' style="display:none;">
+  <td colspan="2">&nbsp;</td>
+</tr>
+
+<tr valign=top style="display:none;" id='tr_inn'>
+  <td>ИНН</td>
+  <td><input id='inn' name='inn' value='{INN}' style="width:230px;"></td>
+</tr>
+<tr valign=top style="display:none;" id='tr_jur_addr'>
+  <td>Юридический адрес</td>
+
+  <td><input id='jur_addr' name='jur_addr' value='{JUR_ADDR}' style="width:230px;"></td>
+</tr>
+
+<tr valign=top style="display:none;" id='tr_phis_address'>
+  <td>Почтовый адрес</td>
+  <td><input id='o_index' name='o_index' maxlength=6 value='{INDEX}' style="width:50px;">
+  <input id='o_phis_address' name='o_phis_address' value='{ADDRESS}' style="width:175px;"></td>
+</tr>
+<tr valign=top style="display:none;" id='tr_line_1'>
+  <td colspan="2">&nbsp;</td>
+</tr>
+
+<tr valign=top style="display:none;" id='tr_o_tel'>
+  <td>Телефон (код страны, код города, номер телефона</td>
+  <td><input id='o_tel' name='o_tel' value='{PHONE}' style="width:230px;"></td>
+</tr>
+<tr valign=top style="display:none;" id='tr_o_email'>
+  <td>Email</td>
+  <td><input id='o_email' name='o_email' value='{EMAIL}' style="width:230px;"></td>
+
+  <!-- END PERSON_DATE -->
+
+</tr>
+<tr valign=top>
+  <td colspan="2">&nbsp;</td>
+</tr>
+<tr valign=top>
+<td><button style="width:200px;" onclick="javascript:cancelCreate();return true;">Отмена</button></td>
+<td><button style="width:230px;" onclick="javascript:save_person();">Сохранить</button></td>
+</tr>
+</form>
+</fieldset>
+</table>
+<br/>
+
+</td></tr></table>
+
+
+
+                </td>
+              </tr>
+             </table>
+             </center>
+            </td>
+          </tr>
+        </table>
+       </center>
+       </td>
+     </tr>
+     <tr>
+       <td class="floor_border">
+         <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+       </td>
+     </tr>
+  </table>
+  </center>
+<script language="javascript">
+change_type();
+</script>
+
+  {ALERT}
+<!-- END DOCUMENT -->
+</body>

@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+
+
+<body>
+
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+        <center>
+        <table class="center_table" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td align="right">
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+          <table border="0" cellspacing="0" cellpadding="0" >
+            <tr>
+              <td>
+
+                    <!-- BEGIN MAIN_INFORMATION -->
+            <table width="310" border="0" cellspacing="3" cellpadding="4">
+              <tr>
+                <td class="header" colspan="2">
+                  <br/>Общая информация:<br/>
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                   Имя лользователя
+                </td>
+                <td class="index2">
+                   {LOGIN} (<a href='#' onclick="javascript:location.href='passwd.php'">изменить</a>)
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                   Тарифный план
+                </td>
+                <td class="index2">
+                   {PLANNAME}
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Текущий баланс
+                </td>
+                <td class="index2">
+                  {RATE} руб ({RATEDAY} дней)
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Сервер
+                </td>
+                <td class="index2">
+                  {SERVERNAME}
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Сайты
+                </td>
+                <td class="index2">
+                {SITES} / {SITESALL}
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Домены
+                </td>
+                <td class="index2">
+                {DOMAIN} / {DOMAINALL}
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Базы данных MySQL
+                </td>
+                <td class="index2">
+                  {MYSQL} / {MYSQLALL}
+                </td>
+              </tr>
+	          <tr>
+	           <td class="index1" width="130" nowrap>
+	             Размер баз данных
+	           </td>
+	           <td class="index2">
+	             {MYSQLSIZE} Мб.
+	           </td>
+	         </tr>
+
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Дисковое пространство
+                </td>
+                <td class="index2">
+                  {QUOTA}Мб / {QUOTAALL}Мб ({RATIOQUOTA}%)
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Почтовые ящики
+                </td>
+                <td class="index2">
+                  {MAILBOXCOUNT} / неограничено
+                </td>
+              </tr>
+              <tr>
+                <td class="index1" width="130" nowrap>
+                  Дополнительные FTP <br>аккаутны
+                </td>
+                <td class="index2">
+                  {FTP} / {FTPALL}
+                </td>
+              </tr>
+             </table>
+             <!-- END MAIN_INFORMATION -->
+             <!-- BEGIN SERVER_INFORMATION -->
+             <table width="310" border="0" cellspacing="3" cellpadding="4">
+               <tr>
+                 <td class="header" colspan="2">
+                   <br/>Информация о сервере:<br/>
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Операционная система
+                 </td>
+                 <td class="index2">
+                   {OS}
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Версия Apache
+                 </td>
+                 <td class="index2">
+                   {APACHE}
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Версия MySQL
+                 </td>
+                 <td class="index2">
+                   {MYSQL}
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Версия PHP
+                 </td>
+                 <td class="index2">
+                   {PHP} (<a href='http://{SERVERNAME}.beget.ru/phpinfo.php' target='blank'>подробней</a>)
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Путь до PHP
+                 </td>
+                 <td class="index2">
+                   {PHPPATH}
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Версия Perl
+                 </td>
+                 <td class="index2">
+                   {PERL}
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Путь до Perl
+                 </td>
+                 <td class="index2">
+                   {PERLPATH}
+                 </td>
+               </tr>
+               <tr>
+                 <td class="index1" width="130" nowrap>
+                   Используемый <br>интерпритатор
+                 </td>
+                 <td class="index2">
+                   {SSH}
+                 </td>
+               </tr>
+             </table>
+             <!-- END SERVER_INFORMATION -->
+              </td>
+
+                <td align="center">
+
+             <table border="0" height="550">
+               <tr valign="top">
+                 <td>
+                   <br/>
+
+
+<script>
+
+
+function preload_img(img)
+{
+  var preload = new Array();
+  for(i=0; i<img.length; i++)
+  {
+    preload[i] = new Image;
+    preload[i].src = '/images/'+img[i]+"_color.png";
+  }
+};
+
+function openFileManager()
+{
+    // todo: clear cookiess
+    //
+    var form = document.getElementById("FileManagerForm");
+    form.submit();
+};
+
+</script>
+
+
+<!-- BEGIN FILEMANAGER -->
+<form id="FileManagerForm"  method="post" action="http://fm.bget.ru/index.php">
+  <input type="hidden" value="{SERVERIP}" name="ftpserver"/>
+  <input type="hidden" value="21" name="ftpserverport" maxlength="5" size="3"/>
+  <input type="hidden" value="{USERNAME}" name="username"/>
+  <input type="hidden" value="0" name="anonymous"/>
+  <input type="hidden" value="{USERPASSWD}" name="password"/>
+  <input type="hidden" value="no" name="passivemode"/>
+  <input type="hidden" value="" name="directory"/>
+  <input type="hidden" value="no" name="sslconnect"/>
+  <input type="hidden" value="ru" name="language"/>
+  <input type="hidden" value="blue" name="skin"/>
+  <input type="hidden" value="automatic" name="ftpmode"/>
+  <input type="hidden" value="browse" name="state"/>
+  <input type="hidden" value="main" name="state2"/>
+</form>
+<!-- END FILEMANAGER -->
+
+
+                     <table>
+                      <!-- BEGIN WELCOM_MESSAGE -->{START}
+                       <tr>
+                         <td style='padding-top:2px;padding-left:10px;'>
+                           <b>Здраствуйте, {NAME}.</b>
+                         </td>
+                       </tr>
+                       <!-- BEGIN LAST_LOGIN -->
+                         <tr>
+                           <td style='padding-top:2px;padding-left:10px;'>
+                              последний раз Вы заходили {LASTDATE} с ip {IP}
+                           </td>
+                         </tr>
+                         <!-- END LAST_LOGIN -->
+                      <!-- END WELCOM_MESSAGE -->
+                     </table>
+
+                    <!-- BEGIN BLOCKED -->
+                    <center>
+                    <table width=480 style='width:480;padding-top:10px;padding-left:10px;' border='0' cellpadding=0>
+                      <tr><td width=100></td>
+                        <td align="left">
+                          Ваш аккаунт был заблокирован {BLOCKDATE}<br>
+                          Обратитесь в службу технической поддержке<br>
+                          Для пополнения баланса нажмите <a href="#">сюда</a>
+                        </td>
+                      </tr>
+                    </table>
+                    </center>
+                    <!-- END BLOCKED -->
+
+                    <!-- BEGIN MENU -->
+                    <table style='width:480;padding-top:10px;padding-left:10px;' border='0' cellpadding=0>
+                      <!-- BEGIN TR -->
+                      <tr valign=top>
+                        <!-- BEGIN TD -->
+                        <td width="120" height="85" nowrap align=center valign=top>
+                         <div onclick="javascript:location.href='{PATH}'" style="cursor: pointer;" onmouseover="javascript:mouse_over('{IMG}');" onmouseout="javascript:mouse_out('{IMG}');">
+                           <img style="cursor:pointer;" alt="" id="{IMG}_img" border="0" src="/images/{IMG}_bleak.png"/>
+                            <br/>{TEXT}
+                          </div>
+                        </td>
+                       <!-- END TD -->
+                       <!-- BEGIN TD_NULL -->{START}
+                        <td width="120" height="85" nowrap align="center" valign="top"></td>
+                       <!-- END TD_NULL -->
+                      </tr>
+                    <!-- END TR -->
+                   </table>
+                    <!-- END MENU -->
+
+       <!--     <script>preload_img(Array('pocht_manager', 'webmail', 'perenesti_domen', 'upr_domenami', 'upr_saitami', 'constr_saitov', 'ftp_accounts', 'file_mngr', 'my_sql', 'my_sql', 'upr_logami', 'crontab', 'dns', 'backup', 'oplata', 'bonus', 'feedback'));</script> -->
+
+         </td>
+         </table>
+
+
+
+
+
+              </td>
+            </tr>
+          </table>
+
+
+            </center>
+
+
+            </td>
+          </tr>
+        </table>
+        </center>
+      </td>
+    </tr>
+    <tr>
+      <td class="floor_border">
+      <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet". Version 1.1 29.10.2008</div>
+      </td>
+    <tr>
+  </table>
+  </center>
+</body>

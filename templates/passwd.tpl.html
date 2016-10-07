@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <script script src='/js/ajax.js'></script>
+  <script script src='/js/passwd.js'></script>
+</head>
+  
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+  
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0"> 
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>           
+            <!-- BEGIN DOCUMENT -->
+             <table width="550" align="center" border="0">
+              <tr>
+                <td>
+                  <table border="0" width="100%">
+                  <tr>
+                    <td width="100">
+                      <img alt="passwd Key" border="0" src="/images/password_big.png"/>
+                    </td>
+                    <td>
+                      <center>
+                       <h2>Смена пораля</h2>
+                      </center>
+                    </td>
+                  </tr>              
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                  &nbsp;&nbsp;&nbsp;&nbsp;Пароль на вход в Панель Управления и основной FTP аккаутн совпадают,
+                  для смены пароля вам необходимо ввсести старый пароль. В случие возникновения
+                  как либо проблем или утраты пароля обратитесь в службу технической поддержки
+                  наши специалисты с радостью Вам помогут
+                  <br><br>
+                  <table>
+                    <tr>
+                      <td>
+                      Старый пароль:
+                      </td>
+                      <td>
+                      <input type="password" id="old_passwd" value="" name="old_passwd" style="width: 200px; margin:0px;"/>
+                      </td>
+                    </tr>
+                      <td>
+                      Новый пароль:
+                      </td>
+                      <td>
+                      <input type="password" id="new_passwd" value="" name="new_passwd" style="width: 200px; margin:0px;"/>
+                      </td>
+                    </tr>
+                      <td>
+                      Подтверждение:
+                      </td>
+                      <td>
+                      <input type="password" id="new2_passwd" value="" name="new2_passwd" style="width: 200px; margin:0px;"/>
+                      </td>
+                    </tr>
+                    </tr>
+                      <td colspan="2">
+                        <br>
+                        <button onclick="javascript:savePasswd();return true;" style="width: 140px; margin:0px;">
+                        Сохранить
+                        </button>
+                      </td>
+                    </tr>
+                  </table>
+                  <br>
+                  <center>
+                    <a href=".."><b>[ Назад ]</b></a>
+                  </center>
+                </td>
+              </tr>
+             </table>
+             </center>
+            </td>
+          </tr>
+        </table>
+       </center>
+       </td>
+     </tr>  
+     <tr>
+       <td class="floor_border">
+         <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+       </td>
+     </tr>
+  </table>
+  </center>
+  {ALERT}
+<!-- END DOCUMENT -->
+</body>

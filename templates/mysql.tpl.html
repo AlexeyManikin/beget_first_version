@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+  <script script src='/js/checker.js'></script>
+  <script script src='/js/ajax.js'></script>
+  <script script src='/js/mysql.js'></script>
+</head>
+
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+
+<!-- BEGIN DOCUMENT -->
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0"> 
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+              <center>
+              <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 550px;">
+              <table width="550" align="center" border="0">
+                <tr>
+                  <td>
+                    <table border="0" width="100%">
+                      <tr>
+                        <td width="100">
+                          <img alt="FTP accounts" border="0" src="/images/mysql_big.png"/>
+                        </td>
+                        <td align="center">
+                          <h2>Управление базами MySQL</h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <div style="text-align: justify;">
+                    <!-- BEGIN MAIN_INFORMATION -->
+                    &nbsp;&nbsp;&nbsp;&nbsp; В данный момент у Вас используется <strong id="count_mysql">{MYSQLCOUNT}</strong> БД MySQL.<br />
+                    <!-- END MAIN_INFORMATION -->
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Создание Базы Данных MySQL</b><br /><br />
+                    Для создания базы данных MySQL Вам необходимо определить имя БД которое состоит
+                    из <b>{LOGIN}_</b> и имени базы которые вы укажите. По умолчанию будет создан доступ с
+                    локальной машины (IP: 127.0.0.1). При создании доступов с других IP Вы указываете
+                    свой пароль для каждого IP.<br /><br />
+                    </div>
+                    <br />
+                    <table>
+                      <tr>
+                        <td width="50">
+                        </td>
+                        <td>
+                          Имя базы
+                        </td>
+                        <td align="rigth">
+                          <b>{LOGIN}_</b>
+                        </td>
+                        <td>
+                          <input type="text" name="login" id="login" value="" style="width: 200px;"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          Пароль к базе
+                        </td>
+                        <td>
+                          <input type="password" name="passwd" id="passwd" value="" style="width: 200px;"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"></td>
+                        <td>
+                          <input type="button" value="Создать" onclick="javascript:add_database(); return false;" style="width: 203px;"/>
+                        </td>
+                      </tr>
+                    </table>
+                    <form id="phpMyAdminForm" target="_top" name="phpMyAdminForm" action="http://{SERVER}.beget.ru/phpMyAdmin/index.php" method="post">
+                      <input id="input_username" type="hidden" value="" name="pma_username"/>
+                      <input id="input_password" type="hidden" value="" name="pma_password"/>
+                      <input type="hidden" value="1" name="server"/>
+                      <input type="hidden" value="ru-utf-8" name="lang"/>
+                      <input type="hidden" value="iso-8859-1" name="convcharset"/>
+                    </form>
+                    <br />
+                    <br />     
+                    <center>
+                      <script language="javascript">
+                        init_table('mysql_table', 550, ['login','size','access','do'], {get_list: load_list});
+                      </script>
+                    </center>
+                  </td>
+                </tr>   
+              </table>     
+              </center>
+              </fieldset>
+            </td>
+          </tr>
+        </table>
+      </center>
+      <!-- END DOCUMENT -->
+      </td>
+    </tr>  
+    <tr>
+      <td class="floor_border">
+        <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+      </td>
+    </tr>
+  </table>
+  </center>
+</body>
+<script language="javascript">
+setTimeout("reload_table('mysql_table');", 1);
+</script>
+

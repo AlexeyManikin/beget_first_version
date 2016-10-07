@@ -1,0 +1,83 @@
+body {
+color:#454646;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:8pt;
+}
+button {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:8pt;
+}
+.BORDERED {
+border:1px dashed #C0C0C0;
+}
+table {
+font-family:Verdana,Arial,Helvetica;
+font-size:8pt;
+}
+td {
+font-family:Verdana,Arial,Helvetica;
+font-size:8pt;
+}
+a:link {
+color:#515151;
+font-family:Verdana,Arial,Helvetica;
+}
+a:visited {
+color:#515151;
+font-family:Verdana,Arial,Helvetica;
+}
+a:hover {
+color:#000000;
+}
+.AA {
+color:#EB5223;
+}
+.BB {
+color:#FFFFFF;
+}
+.CC {
+color:#FF5402;
+font-family:Verdana,Arial,Helvetica;
+font-size:12pt;
+}
+.dd {
+color:#FF5402;
+font-family:Verdana,Arial,Helvetica;
+font-size:10pt;
+}
+.ee {
+color:#FE3E03;
+}
+p {
+text-align:justify;
+}
+.form {
+background:white none repeat scroll 0%;
+border:2px solid #B7AF85;
+color:black;
+font-size:12px;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:12px;
+}
+.butt {
+background-color:#FFFFFF;
+border-color:#EAEAEA rgb(174, 174, 174) rgb(174, 174, 174) rgb(234, 234, 234);
+border-style:solid;
+border-width:1px;
+color:#057EC2;
+font-family:tahoma,verdana,arial,helvetica,sans serif;
+font-size:12px;
+}
+.cpbutt {
+background-color:#057EC2;
+border-color:#EAEAEA rgb(174, 174, 174) rgb(174, 174, 174) rgb(234, 234, 234);
+border-style:solid;
+border-width:1px;
+color:#EBEBEB;
+font-family:tahoma,verdana,arial,helvetica,sans serif;
+font-size:10px;
+width:100%;
+}
+img.logo { behavior:expression( !this.flag ? this.flag = (this.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + this.src + '", sizingMethod="image")', this.src='/images/logo.gif', true) : '' ); }

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+  <script script src='/js/checker.js'></script>
+  <script script src='/js/ajax.js'></script>
+  <script script src='/js/sites.js'></script>
+</head>
+  
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+
+<!-- BEGIN DOCUMENT -->
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0"> 
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+              <center>
+              <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 550px;">
+              <table width="550" align="center" border="0">
+                <tr>
+                  <td>
+                    <table border="0" width="100%">
+                      <tr>
+                        <td width="100">
+                          <img alt="Sites" border="0" src="/images/sites_big.png"/>
+                        </td>
+                        <td align="center">
+                          <h2>Управление сайтами</h2>
+                        </td>
+                      </tr>              
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    &nbsp;&nbsp;&nbsp;&nbsp; Сайт представляет собой место на диске, на которое ссылается одлин или несколько
+                    доменов либо поддоменов. На Вашем тарифном плане вам доступно {SITESALL} сайтов из которых
+                    используется <strong id="count_sites">{SITESUSE}</strong>.
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp; Для создания нового сайта Вам необходимо указать папку в которой он будет расположен. Дериктория для сайта будет созданна
+                    относительно домашней деректории. Имя директории может состоять из латинских букв, цифр и следующих символов: "-" (тире), 
+                    "." (точка) и символ "/" (слэш) для указания вложенной директории.<br />
+                    <br />
+                    <center>
+                    
+                    <table border="0">
+                      <tr>
+                        <td align="left">
+                          <b>[ <font color="red">Создание сайта</font> ]</b>
+                          <br />
+                          <br />
+                          Имя деректории:
+                          <input type="input" id="site_path"  value="yoursite.ru" style="width: 200px;">
+                          &nbsp;
+                          <input type="button" value="Создать" onclick="javascript:createSite();return false;" style="width: 150px;"/>
+                          <br />
+                          <br />
+                          <b>[<font color="red"> Привязка сайта </font>]</b>
+                          <br />
+                          <br />
+                          <table border="0">
+                            <tr>
+                              <td width="200">
+                                Директория:
+                              </td>
+                              <td>
+                                <select id="sites" name="sites" style="width: 255px;">
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                Домен:
+                              </td>
+                              <td>
+                                <select id="domains" name="domains" style="width: 255px;">
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td>
+                                <input type="button" value="Прилинковать" onclick="javascript:linkDomain();return false;" style="width: 255px;"/>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <br />
+                    <script language="javascript">
+                      init_table('sites_table', 550, ['folder','site','do'], {get_list: load_list});
+                    </script>
+                    </center>
+                  </td>
+                </tr>
+              </table>
+              </fieldset>
+              </center>
+            </td>
+          </tr>
+        </table>
+        </center>
+      </td>
+    </tr>  
+    <tr>
+      <td class="floor_border">
+        <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+      </td>
+    </tr>
+  </table>
+  </center>
+  {ALERT}
+<!-- END DOCUMENT -->
+</body>
+<script language="javascript">
+get_sites();
+get_free_domains();
+setTimeout("reload_table('sites_table');", 1);
+</script>

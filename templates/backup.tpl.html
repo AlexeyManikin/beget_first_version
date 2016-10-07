@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src='/js/ajax.js'></script>
+  <script src='/js/backup.js'></script>
+</head>
+
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0"> 
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>           
+            <!-- BEGIN DOCUMENT -->
+            <br>
+            <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 550px;">
+             <table width="550" align="center" border="0">
+              <tr>
+                <td>
+                  <table border="0" width="100%">
+                  <tr>
+                    <td width="100">
+                      <img alt="DNS Resords" border="0" src="/images/backup_big.png"/>
+                    </td>
+                    <td>
+                      <center>
+                       <h2>Восстановление данных</h2>
+                      </center>
+                    </td>
+                  </tr>              
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+         
+                  <center>
+		  <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 5px; ">
+                  <div style="text-align: justify;">
+                  <font color="red">Внимание:</font> обращаем Ваше внимание на то что периуд хранения бекапов не ограничивается
+		  7 днями которые указаны здесь. Приблизительное время хранения все данных от месяца до двух.
+		  Для восстановления более поздних бекапов напишите запрос на <a href="mailto:support@beget.ru">support@beget.ru</a>
+                  </div>
+		  </fieldset>
+		  <br>  
+                  <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 5px; ">
+                  <form id="changeDay"  name="changeDay" method="post">
+                  <table border="0">
+                  <tr>
+                    <td width="200" align="left">
+                      <input id="type"  type="radio" VALUE="files" name="type" CHECKED onclick="javascript:changeType('files')"/> Востановление файлов
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left">
+	                  <input id="type" type="radio" VALUE="mysql"  name="type" onclick="javascript:changeType('mysql')"/> Востановление MySQL
+	                  <input type="hidden" name="actions" value="moveDay">
+	                </td>
+	                <td>
+	                  Выберете дату: 
+	                  <select id="date" name="date" style="width: 200px;" onchange="javascript:changeDate();">
+	                    <!-- BEGIN SELECT_DATE --><option value="{DATE}" {DATESTATUS}>{DATESEE} </option><!-- END SELECT_DATE -->
+			          </select>
+	                </td>
+	              </tr>
+	              </table>
+	              </form>
+	              </fieldset>
+	              </center>
+	              <br>
+	    
+	              
+	            
+				  <br><center>
+				  <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 500px;">
+	                Текущия деректория : <input id="current_dir" value="" disabled="" style="width: 400px; color: rgb(51, 51, 51);"/><br>
+	                <br>
+	                
+	                <script>
+                      init_file_table('backup_table', 500, ['name', 'restore'], {get_file_list: load_file_list, change_directory: chdir_file_list});
+                    </script>
+                    
+	                
+	              </fieldset>
+			</center>	  
+	              
+	             
+                </td>
+              </tr>
+             </table>
+             </center>
+            </td>
+          </tr>
+        </table>
+        </fieldset>                
+       </center>
+       </td>
+     </tr>  
+     <tr>
+       <td class="floor_border">
+         <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+       </td>
+     </tr>
+  </table>
+  </center>
+  {ALERT}
+  
+  
+  <script>
+    setTimeout("filetable_chdir('backup_table', '');", 100);
+  </script>
+<!-- END DOCUMENT -->
+</body>

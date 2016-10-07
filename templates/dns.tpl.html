@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <script script src='/js/ajax.js'></script>
+  <script script src='/js/dns.js'></script>
+</head>
+  
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+  
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0"> 
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>           
+            <!-- BEGIN DOCUMENT -->
+            <br>
+             <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 550px;">
+             <table width="550" align="center" border="0">
+              <tr>
+                <td>
+                  <table border="0" width="100%">
+                  <tr>
+                    <td width="100">
+                      <img alt="DNS Resords" border="0" src="/images/dns_big.png"/>
+                    </td>
+                    <td>
+                      <center>
+                       <h2>Управление DNS записями</h2>
+                      </center>
+                    </td>
+                  </tr>              
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                  <form id="changeDomen"  name="changeDomen" method="post">
+                    <input type="hidden" name="actions" value="moveDomain">
+                    <table border="0" width="100%">
+                    <tr><td>
+                    Настройка файла зоны для домена:
+                    </td><td>
+                    <select id="domain" name="domain" style="width: 200px;" onchange="javascript:update_domain();return false;">
+                    <!-- BEGIN SELECT_DOMAIN -->
+                      <option value="{DOMAIN}">{DOMAIN} </option>
+                      <!-- BEGIN SELECT_SUBDOMAIN -->
+                      <option value="{SUBDOMAIN}">&nbsp;&nbsp;&nbsp;{SUBDOMAIN}</option>
+                       <!-- END SELECT_SUBDOMAIN -->
+                    <!-- END SELECT_DOMAIN -->
+                    </select>
+                    </td><td align="center">
+                    </form>
+                    <button onclick="javascript:send_date();return false;" style="width: 140px; margin:0px;">
+                      Сохранить
+                    </button>
+                    </td>
+                    </table>
+                  <br>
+                  <form id="typeRec" name="typeRec">
+                  <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 500px;" onchange="javascript:setRecordType()">
+                    <input id="type_a" type="radio" name="opt_type"/> Настройка зоны на NS серверах комтании BeGet<br>
+                    <div id="subdomain_edit">
+                      <input id="type_ns" type="radio" name="opt_type"/> Перенаправление на алтернативные сервера<br>
+                      <input id="type_cname" type="radio" name="opt_type"/> Создание алиаса записи<br>
+                    </div>
+                  </fieldset>
+                  </form>
+                  <br>
+                  <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 500px;">
+                    <form id="editForm" name="edirForm">
+                    <div id="record_a" style="display:block;">
+                      Редактирование основной записи A для домена. Запись A отвечает за то, куда направлена зона.
+                      Например, для направления домена mydomain.ru на сервер 123.13.17.38 необходимо указать в 
+                      записи A IP адрес 123.13.17.38.<br><br>
+                      A запись: <input type="input" id="rr_a" value="" name="rr_a" style="width: 200px; margin:0px;"/>
+                      <br><br>
+                      Редактирование MX записей для домена. Запись MX отвечает за то, куда будет направлена 
+                      почта для домена.<br><br>
+                      <table>
+                        <tr>
+                          <td>
+                            MX1 запись:
+                          </td>
+                          <td>
+                            <input type="input" id="rr_mx1" value="" name="rr_mx1" style="width: 200px; margin:0px;"/><br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            MX2 запись:
+                          </td>
+                          <td>
+                            <input type="input" id="rr_mx2" value="" name="rr_mx2" style="width: 200px; margin:0px;"/>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="record_ns" style="display:none;">
+                      Редактирование NS серверов для домена. Записи NS отвечают за то, на каких DNS серверах необходимо
+                      искать информацию о вашем домене. Внимание: опция доступна только для поддоменов. доменов NS сервера
+                      редактируются на стороне Вашего регистратора. За подробной информацией обращайтесь, пожалуйста,
+                      в службу технической поддержки.<br><br>
+                      <table border="0">
+                        <tr>
+                          <td>
+                            Основной NS сервер :
+                          </td>
+                          <td>
+                            <input type="input" id="rr_ns1" value="" name="rr_ns1"/><br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Дополнительный NS сервер:
+                          </td>
+                          <td>
+                            <input type="input" id="rr_ns2" value="" name="rr_ns2"/>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="record_cname" style="display:none;">
+                      Запись CNAME (canonical name record) или каноническая запись имени используется
+                      для перенаправления на другое имя.<br><br>
+                      CNAME запись:
+                      <input type="input" id="rr_cname" value="" name="rr_cname"/>
+                    </div>
+                    </form>
+                  </fieldset>
+                </td>
+              </tr>
+             </table>
+             </center>
+            </td>
+          </tr>
+        </table>
+       </center>
+       </td>
+     </tr>  
+     <tr>
+       <td class="floor_border">
+         <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+       </td>
+     </tr>
+  </table>
+  </center>
+  {ALERT}
+<script language="javascript">update_domain();</script>
+<!-- END DOCUMENT -->
+</body>

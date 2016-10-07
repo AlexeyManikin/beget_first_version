@@ -1,0 +1,92 @@
+body {
+    background:#D5D6D7 url(../images/bg_body.jpg) repeat scroll 0%;
+    color:#333333;
+    font-family:'Lucida Grande','Verdana','Arial','Sans-Serif';
+    font-size:70%;
+    text-align:left;
+    border:0;
+}
+img.logo { behavior:expression( !this.flag ? this.flag = (this.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + this.src + '", sizingMethod="image")', this.src='/images/logo.gif', true) : '' ); }
+.main_table {
+    background:#FFFFFF url(../images/bg_body.jpg) repeat scroll 0%;
+    border:0px;
+    aling:center;
+    width:900px; 
+}
+
+.center_table {
+    margin-top:5px;
+    margin-left:0px;
+    width:860px;
+}
+
+.top_border {
+    background:#FFFFFF url(../images/bg_top.jpg) repeat scroll 0%;
+    margin-top:0px;
+    margin-left:0px;
+    height:18px;
+}
+
+.center_border {
+   background:#FFFFFF url(../images/bg_center.jpg) repeat scroll 0%;
+   margin-top:0px;
+   margin-left:0px;
+}
+
+.floor_border {
+    background:#FFFFFF url(../images/bg_floor.jpg) repeat scroll 0%;
+    margin-top:0px;
+    margin-left:0px;
+    height:63px;
+}
+
+.table1 {
+    border:1px solid #FFFFFF;
+}
+
+.index1 {
+    background-color:#DDDFFF;
+    text-align:left;
+    font-family:'Lucida Grande','Verdana','Arial','Helvetica','sans-serif';
+}
+.index2 {
+    background-color:#DDDDDF;
+    text-align:left;
+    font-family:'Lucida Grande','Verdana','Arial','Helvetica','sans-serif';
+}
+
+.header {
+    font-family:'Lucida Grande','Verdana','Arial','Helvetica','sans-serif';
+    font-style:normal;
+    text-align:left;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+h1 {
+    font-family:'verdana','arial','helvetica','sans-serif';
+    text-decoration:none;
+}
+
+h2 {
+    font-family:'verdana','arial','helvetica','sans-serif';
+    font-size:160%;
+    text-decoration:none;
+}
+
+h3 {
+    font-family:'verdana','arial','helvetica','sans-serif';
+    font-size:130%;
+    text-decoration:none;
+}
+
+h4 {
+    font-family:'verdana','arial','helvetica','sans-serif';
+    font-size:100%;
+    text-decoration:none;
+}
+
+select, input {
+    background:#FFFFFF none repeat scroll 0%;
+    border:1px solid #AABAA4;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Beget - качественный хостинг</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/style.css">
+  <script script src='/js/ajax.js'></script>
+  <script script src='/js/ftp.js'></script>
+</head>
+  
+<script language="javascript">
+<!-- BEGIN AJAX_FUNCTION -->this.{FINCTION_NAME} = function({PARAM_LIST}callback){ return do_call("{FINCTION_NAME}", [{PARAM_NAME}], callback);};
+<!-- END AJAX_FUNCTION -->
+</script>
+<!-- BEGIN DOCUMENT -->
+<body>
+  <center>
+  <table class="main_table" cellspacing="0" cellpadding="0"> 
+    <tr>
+      <td class="top_border">
+      </td>
+    </tr>
+    <tr>
+      <td class="center_border">
+      <center>
+        <table class="center_table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <!-- BEGIN TOP -->
+            {TEXT_TOP}
+            <!-- END TOP -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+            <br />
+            <fieldset style="border: 1px solid rgb(228, 228, 228); padding: 10px; width: 550px;">
+            <table width="550" align="center" border="0">
+              <tr>
+                <td>
+                  <table border="0" width="100%">
+                  <tr>
+                    <td width="100">
+                      <img alt="FTP accounts" border="0" src="/images/ftp_big.png"/>
+                    </td>
+                    <td>
+                      <center>
+                       <h2>Управление FTP аккаунтами</h2>
+                      </center>
+                    </td>
+                  </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                <div style="text-align: justify;">
+                <!-- BEGIN MAIN_INFORMATION -->
+                 &nbsp;&nbsp;&nbsp;&nbsp; На вашем тарифном плане доступно <b>{FTPALL}</b> дополнительных FTP аккаунтов.
+                <!-- END MAIN_INFORMATION -->
+                <br /><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;Дополнительные FTP аккаунты используются для разграничения доступа к различным
+                разделам сайта или различым сайтам. Созданные аккаунты будут иметь доступ только
+                указанным папкам и всем вложением в нее. При удалении FTP аккаунта папка на которую
+                он ссылается не удаляется.
+                <br /><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>Создание FTP аккаунта</b><br /><br />
+                Для создания FTP аккаунта Вам необходимо указать Имя пользователя, которое формируется
+                в виде <b>{LOGIN}_</b>(логин). Логин должен состоять только из букв латинского алфавита, цифр
+                и заков подчеркивания. В качестве директории пользователя укажите любую директорию относительно
+                корня аккаунта. Если директория не существует - она будет создана.<br /><br />
+                </div>
+                
+                <form method="post">
+                <table>
+	          <tr>
+                    <td width="50">
+                    </td>
+                    <td>
+	              Имя пользователя 
+	            </td>
+	            <td>
+		      <input type="text" id="login" name="login" value="" style="width: 200px;"/>
+	            </td>
+	          </tr>
+                  <tr> 
+                    <td>
+                    </td>
+	            <td>
+		      Путь к дериктории
+		    </td>
+		    <td>
+		      <input type="text" id="path" name="path" value=""  style="width: 200px;"/>
+		    </td>
+	          </tr>
+                  <tr>
+                    <td>
+                    </td>
+	            <td>
+	              Пароль аккаунта
+	            </td>
+	            <td>
+	              <input type="password" id="passwd" name="passwd" value="" style="width: 200px;"/>
+	            </td>
+	          </tr>
+	          <tr>
+	            <td colspan="2">
+	            </td>
+		    <td>
+                      <input type="button" value=" Создать " onclick="javascript:create_ftp_user2(); return false;" style="width: 203px;"/>
+		    </td>
+	          </tr>
+                </table>
+                </form>
+                <br />
+                <br />
+                <center>
+                  <script language="javascript">
+                      init_table('ftp_table', 580, ['domain','login','path'], {get_list: load_list});
+                  </script>
+                </center>
+                {ALERT}    
+                </td>
+              </tr> 
+            </table>
+            </fieldset>
+            <!-- END DOCUMENT -->
+            </center>
+            </td>
+          </tr>
+        </table>
+       </center>
+       </td>
+     </tr>  
+     <tr>
+       <td class="floor_border">
+         <div align="right" style="margin-right:30px;">Панель Управления аккаунтом (C) ООО "BeGet".</div>
+       </td>
+     </tr>
+  </table>
+  </center>
+</body>
+<script language="javascript">
+setTimeout("reload_table('ftp_table');", 1);
+</script>
